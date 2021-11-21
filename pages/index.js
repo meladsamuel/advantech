@@ -23,7 +23,12 @@ export default function Index() {
               px: { xs: 2, md: 8 },
             }}
           >
-            <Typography gutterBottom variant="h4" component="h3">
+            <Typography
+              gutterBottom
+              variant="h4"
+              component="h3"
+              color="primary.main"
+            >
               Fire Fighting System
             </Typography>
             <Typography>
@@ -34,7 +39,7 @@ export default function Index() {
               each customer and applications we are committed to providing you
               with quality service according to international standards. ​
             </Typography>
-            <Typography variant="h6" component="h4">
+            <Typography variant="h6" component="h4" color="primary.main">
               Our firefighting solutions include:
             </Typography>
 
@@ -43,17 +48,18 @@ export default function Index() {
               <li>Foam System.</li>
               <li>Fire Cabinets & Fire Extinguishers.</li>
               <li>Fire Hydrant& Siamese Connection.</li>
-              <li>Grooved Fitting.</li>
-              <li>Threaded Malleable Iron Pipes.</li>
-              <li>Rubber Expansion Joints.</li>
+              <li>Seamless Black Stell Pipe.</li>
+              <li>Threaded Fittings.</li>
+              <li>Welded Fittings.</li>
             </ul>
-            <Typography variant="h6" component="h4">
-              Wet Chemical System
+            <Typography variant="h6" component="h4" color="primary.main">
+              Fire Supperssion System
             </Typography>
             <ul>
               <li>FM200 System.</li>
               <li>CO2 System.</li>
               <li>Aerosol System.</li>
+              <li>NOVEC System.</li>
             </ul>
           </Grid>
           <Grid item xs={12} md={7} sx={{ position: "relative" }}>
@@ -251,7 +257,8 @@ export default function Index() {
               Head Office
             </Typography>
             <Typography>+20 127-265-8400</Typography>
-            <Typography>+20 102-540-1700</Typography>
+            <Typography>+20 128-099-9180</Typography>
+            <Typography>+20 128-099-9186</Typography>
             <Typography>0223570401</Typography>
             <Typography>sales@advanteches.com</Typography>
           </Grid>
@@ -260,7 +267,6 @@ export default function Index() {
               Social
             </Typography>
             <Typography>Facebook</Typography>
-            <Typography>LinkedIn</Typography>
           </Grid>
           <Grid item xs={14} md={3}>
             <Typography variant="h5" gutterBottom component="h6">
@@ -268,8 +274,9 @@ export default function Index() {
             </Typography>
             <Typography>
               For any inquiries, questions or commendations, please call:
-              123-456-7890
             </Typography>
+            <Typography>+20 127-265-8400</Typography>
+            <Typography>+20 128-099-9180</Typography>
           </Grid>
         </Grid>
       </Container>
