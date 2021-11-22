@@ -10,7 +10,13 @@ import Divider from "@mui/material/Divider";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+
 export default function Index() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box sx={{ height: "100%" }}>
       <AppBar />
@@ -246,7 +252,11 @@ export default function Index() {
           Our Projects
         </Typography>
         <Box sx={{ width: "100%", overflow: "hidden" }}>
-          <ImageList variant="masonry" cols={3} gap={8}>
+          <ImageList
+            variant="masonry"
+            cols={matches ? 1 : 3}
+            gap={matches ? 0 : 8}
+          >
             <ImageListItem>
               <img src="/images/projects/project_madenty.jpeg" />
               <ImageListItemBar
@@ -336,7 +346,12 @@ export default function Index() {
             <Typography variant="h5" gutterBottom component="h6">
               Social
             </Typography>
-            <Typography>Facebook</Typography>
+            <a
+              href="https://www.facebook.com/Advantech-Engineering-Services-103742515122337"
+              target="_blank"
+            >
+              Facebook
+            </a>
           </Grid>
           <Grid item xs={14} md={3}>
             <Typography variant="h5" gutterBottom component="h6">

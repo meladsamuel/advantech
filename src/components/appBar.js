@@ -8,6 +8,10 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
+import Link from "../../src/Link";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Image from "next/image";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -39,9 +43,20 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar color="transparent">
           <Toolbar>
-            <Typography variant="h6" component="div">
-              Advantech
+            <Typography
+              variant="h6"
+              color="primary.main"
+              component="span"
+              sx={{ flexGrow: 1 }}
+            >
+              <Link href="/">ADVANTECH</Link>
             </Typography>
+
+            <ButtonGroup size="large">
+              <Link href="/contact">
+                <Button>Contact</Button>
+              </Link>
+            </ButtonGroup>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
