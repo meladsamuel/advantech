@@ -20,6 +20,7 @@ export default function Index() {
             md={5}
             sx={{
               paddingTop: { md: 25 },
+              paddingBottom: { md: 10 },
               px: { xs: 2, md: 8 },
             }}
           >
@@ -48,7 +49,7 @@ export default function Index() {
               <li>Foam System.</li>
               <li>Fire Cabinets & Fire Extinguishers.</li>
               <li>Fire Hydrant& Siamese Connection.</li>
-              <li>Seamless Black Stell Pipe.</li>
+              <li>Seamless Black Steel Pipe.</li>
               <li>Threaded Fittings.</li>
               <li>Welded Fittings.</li>
             </ul>
@@ -62,11 +63,17 @@ export default function Index() {
               <li>NOVEC System.</li>
             </ul>
           </Grid>
-          <Grid item xs={12} md={7} sx={{ position: "relative" }}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            sx={{ position: "relative", minHeight: 400 }}
+          >
             <Image
               src="/images/advantech_fire_fighting.webp"
               layout="fill"
-              objectFit
+              objectFit="cover"
+              loading="eager"
             />
           </Grid>
         </Grid>
@@ -76,14 +83,12 @@ export default function Index() {
             xs={12}
             md={5}
             order={{ xs: 2, sm: 2, md: 1, lg: 1 }}
-            sx={{ position: "relative" }}
+            sx={{ position: "relative", minHeight: 400 }}
           >
             <Image
               src="/images/advantech_fire_alarm.jpg"
-              width="200"
-              height="300"
-              layout="responsive"
-              objrectFill
+              layout="fill"
+              objectFit="cover"
             />
           </Grid>
           <Grid
@@ -92,6 +97,8 @@ export default function Index() {
             md={7}
             sx={{
               paddingTop: { md: 25 },
+              paddingBottom: { md: 10 },
+
               px: { xs: 2, md: 8 },
             }}
             order={{ xs: 1, sm: 1, md: 2, lg: 2 }}
@@ -113,8 +120,8 @@ export default function Index() {
 
             <ul>
               <li>Conventional Fire Alarm System</li>
-              <li>conventional Fire Alarm Control Panel Detectors</li>
-              <li>conventional Horns / Bells</li>
+              <li>Conventional Fire Alarm Control Panel Detectors</li>
+              <li>Conventional Horns / Bells</li>
             </ul>
             <ul>
               ​<li>Addressable Fire Alarm System</li>
@@ -133,14 +140,13 @@ export default function Index() {
           xs={12}
           md={6}
           order={{ xs: 2, sm: 2, md: 1, lg: 1 }}
-          sx={{ position: "relative" }}
+          sx={{ position: "relative", minHeight: 400 }}
         >
           <Image
             src="/images/advantech_video.jpg"
-            width="200"
-            height="300"
-            layout="responsive"
-            objrectFill
+            layout="fill"
+            objectFit="cover"
+            loading="eager"
           />
         </Grid>
         <Grid
@@ -150,6 +156,8 @@ export default function Index() {
           order={{ xs: 1, sm: 1, md: 2, lg: 2 }}
           sx={{
             paddingTop: { md: 25 },
+            paddingBottom: { md: 10 },
+
             px: { xs: 2, md: 8 },
           }}
         >
@@ -228,16 +236,21 @@ export default function Index() {
 
       <Container sx={{ paddingTop: { xs: 30, md: 20 } }}>
         <Divider />
-        <Typography gutterBottom align="center" variant="h2">
-          Our Partner
+        <Typography
+          gutterBottom
+          align="center"
+          variant="h2"
+          color="primary.main"
+        >
+          <b>Our Partner</b>
         </Typography>
       </Container>
 
       <Image
         src="/images/advantech_partner.png"
         layout="responsive"
-        height="325"
         width="1000"
+        height="325"
       />
       <Container sx={{ paddingTop: 20 }}>
         <Divider />

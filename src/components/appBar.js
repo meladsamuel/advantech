@@ -7,6 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import Slide from "@mui/material/Slide";
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -18,17 +19,18 @@ function ElevationScroll(props) {
     threshold: 0,
     target: window ? window() : undefined,
   });
-
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-    color: trigger ? "secondary" : "transparent",
+  const triggerSlide = useScrollTrigger({
+    target: window ? window() : undefined,
   });
+  return (
+    <Slide appear={false} direction="down" in={!triggerSlide}>
+      {React.cloneElement(children, {
+        elevation: trigger ? 4 : 0,
+        color: trigger ? "secondary" : "transparent",
+      })}
+    </Slide>
+  );
 }
-
-ElevationScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  window: PropTypes.func,
-};
 
 export default function ElevateAppBar(props) {
   return (
