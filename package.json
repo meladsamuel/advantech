@@ -7,12 +7,16 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^5.1.1",
+    "@mui/lab": "^5.0.0-alpha.55",
     "@mui/material": "latest",
     "clsx": "latest",
+    "mongoose": "^6.0.13",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-slick": "^0.28.1",
     "react-spring": "^9.3.1"
   },
   "scripts": {

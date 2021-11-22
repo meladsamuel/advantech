@@ -7,6 +7,9 @@ import HeroSection from "../src/components/hero";
 import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
 export default function Index() {
   return (
     <Box sx={{ height: "100%" }}>
@@ -233,7 +236,61 @@ export default function Index() {
           </Container>
         </Box>
       </Box>
+      <Container sx={{ paddingTop: 20 }}>
+        <Typography
+          gutterBottom
+          align="center"
+          variant="h3"
+          color="primary.main"
+        >
+          Our Projects
+        </Typography>
+        <Box sx={{ width: "100%", overflow: "hidden" }}>
+          <ImageList variant="masonry" cols={3} gap={8}>
+            <ImageListItem>
+              <img src="/images/projects/project_madenty.jpeg" />
+              <ImageListItemBar
+                title="مشروع مول مدينتي"
+                subtitle="مول مدينتي"
+              />
+            </ImageListItem>
+            <ImageListItem>
+              <img src="/images/projects/project_abdo_zabal.jpeg" />
+              <ImageListItemBar
+                title="مشروع مصنع ابو زعبل للاسمدة والكيماويات"
+                subtitle="مصنع ابو زعبل للاسمدة والكيماويات"
+              />
+            </ImageListItem>
 
+            <ImageListItem>
+              <img src="/images/projects/project_engineers_syndicate.jpeg" />
+              <ImageListItemBar
+                title="مشروع نقابه المهندسين"
+                subtitle=" نقابه المهندسين"
+              />
+            </ImageListItem>
+            <ImageListItem>
+              <img src="/images/projects/project_four_sesson.jpg" />
+              <ImageListItemBar
+                title="مشروع فندق الفورسيزون شرم الشيخ"
+                subtitle="فندق الفورسيزون"
+              />
+            </ImageListItem>
+            <ImageListItem>
+              <img src="/images/projects/project_azad.jpeg" />
+              <ImageListItemBar
+                title="مشروع ازاد التجمع الخامس"
+                subtitle="مشروع ازاد"
+              />
+            </ImageListItem>
+
+            <ImageListItem>
+              <img src="/images/projects/project_lamar.jpeg" />
+              <ImageListItemBar title="مشروع مصنع لمار" subtitle="مصنع لمار" />
+            </ImageListItem>
+          </ImageList>
+        </Box>
+      </Container>
       <Container sx={{ paddingTop: { xs: 30, md: 20 } }}>
         <Divider />
         <Typography
