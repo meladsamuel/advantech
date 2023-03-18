@@ -24,11 +24,11 @@ export default function Hero() {
           sx={{ color: "primary.light" }}
         >
           <b>
-            Safty First <br />
+            Safety First <br />
             with
             <Box component="span" sx={{ color: "primary.main" }}>
               {" "}
-              ADVTECH
+              ADVANTECH
             </Box>
           </b>
         </Typography>
