@@ -18,7 +18,7 @@ export default function Hero() {
     >
       <Container sx={{ paddingTop: 20 }}>
         <Typography
-          variant="h2"
+          variant="h3"
           component="h1"
           gutterBottom
           sx={{ color: "primary.light" }}
